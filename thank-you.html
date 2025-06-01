@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thank You | Caleb Zondo - Web Designer & Developer</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
+
+    <style>
+      body {
+        background: linear-gradient(to bottom right, #1b1b3a, #ffffff);
+        color: #fff;
+        text-align: center;
+        font-family: 'Segoe UI', sans-serif;
+      }
+
+      .hero-banner {
+        position: relative;
+      }
+
+      .hero-banner img {
+        max-height: 1000vh;
+        object-fit: cover;
+      }
+
+      .overlay-text {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        max-width: 90%;
+        width: fit-content;
+      }
+
+      .btn-developer {
+        background-color: #2033b3;
+        color: white;
+        font-weight: 600;
+        border-radius: 6px;
+        padding: 10px 25px;
+        display: inline-block;
+        margin-top: 15px;
+        text-decoration: none;
+      }
+
+      .navbar-brand img {
+        height: 80px;
+        width: 80px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      .contact-section {
+        padding: 60px 0;
+      }
+
+      .btn-primary {
+        background-color: #4a6fff;
+        border: none;
+        padding: 12px 30px;
+        font-weight: bold;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .footer p {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent px-4">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold fs-3 d-flex align-items-center" href="#">
+            <img src="assets/images/logo.png" alt="Logo" />
+            M v u s e l e l o
+          </a>
+          <ul class="navbar-nav ms-auto d-flex align-items-center">
+            <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="about.html">About Me</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="portfolio.html">Websites</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+          </ul>
+          <ul>
+            <li class="nav-item"><a class="nav-link text-white btn-developer" href="resume.html">Developer Portfolio</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero-banner position-relative">
+      <img src="assets/images/banner1.png" class="d-block w-100" alt="Banner 1" />
+      <div class="overlay-text text-white">
+        <h1 class="mb-2">Thank You!</h1>
+      </div>
+    </section>
+
+    <!-- CONFIRMATION MESSAGE -->
+    <section class="contact-section text-center">
+      <div class="container">
+        <h2 class="mb-4">Message Received</h2>
+        <p class="lead mb-5">
+          Your message has been successfully submitted.<br />
+          I’ll get back to you as soon as possible.
+        </p>
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer text-center py-4 bg-dark text-white">
+      <div class="container">
+        <p>Connect with me:</p>
+        <a href="https://www.linkedin.com/in/caleb-zondo-65480a229" target="_blank"><i class="fab fa-linkedin mx-2"></i></a>
+        <a href="https://github.com/ZondoJnr" target="_blank"><i class="fab fa-github mx-2"></i></a>
+        <a href="https://www.tiktok.com/@caleb_zondo?_t=ZM-8wpfi59YCMX&_r=1" target="_blank"><i class="fab fa-tiktok mx-2"></i></a>
+        <a href="https://www.facebook.com/share/19eyybCtSp/" target="_blank"><i class="fab fa-facebook mx-2"></i></a>
+        <a href="https://www.instagram.com/caleb_zondo" target="_blank"><i class="fab fa-instagram mx-2"></i></a>
+        <a href="https://youtube.com/@mvuselelo_zondo" target="_blank"><i class="fab fa-youtube mx-2"></i></a>
+        <p class="mt-3 mb-0">&copy; 2025 Caleb Zondo. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

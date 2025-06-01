@@ -1,0 +1,162 @@
+/* styles.css */
+
+/* General Reset & Layout */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+/* Fading Alternating Backgrounds */
+.white {
+  background: linear-gradient(to bottom, #ffffff, #f0f8ff);
+}
+
+.blue {
+  background: linear-gradient(to bottom, #e0f0ff, #d0e6ff);
+}
+
+.fade-section {
+  transition: background 1s ease;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ffffffee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #2d3e50;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Hero Banner */
+.hero-banner {
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  color: white;
+  text-shadow: 1px 1px 4px #000;
+}
+
+.overlay-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.overlay-text .btn {
+  background-color: #007bff;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  border-radius: 5px;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  flex: 1 1 45%;
+  background: #ffffffcc;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+.btn, .btn-outline {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-outline {
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+
+.btn-outline:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f5faff;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: #007bff;
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Caleb Zondo | Web Designer & Developer</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
+
+    <style>
+      body {
+        background: linear-gradient(to bottom right, #1b1b3a, #ffffff);
+        color: #fff;
+        text-align: center;
+        font-family: 'Segoe UI', sans-serif;
+      }
+
+      .hero-banner {
+        position: relative;
+      }
+
+      .hero-banner img {
+        max-height: 1000vh;
+        object-fit: cover;
+      }
+
+      .overlay-text {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        position: absolute;
+        bottom: 20px;
+        
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        max-width: 90%;
+        width: fit-content;
+      }
+
+      .overlay-text h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .btn-primary {
+        background-color: #4a6fff;
+        border: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 6px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .btn-developer {
+        background-color: #2033b3;
+        color: white;
+        font-weight: 600;
+        border-radius: 6px;
+        padding: 10px 25px;
+        display: inline-block;
+        margin-top: 15px;
+        text-decoration: none;
+      }
+
+      .section {
+        padding: 60px 0;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        margin: 20px auto;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        width: 90%;
+      }
+
+      .section.white {
+        background: linear-gradient(to bottom right, #1a1a4e, #2e1a47);
+      }
+
+      .btn-outline {
+        border: 2px solid #4a6fff;
+        color: #4a6fff;
+        padding: 8px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .btn {
+        background-color: white;
+        color: #1b1b3a;
+        padding: 10px 25px;
+        font-weight: 600;
+        border-radius: 6px;
+        text-decoration: none;
+        margin-top: 10px;
+      }
+
+      footer a {
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .footer p {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+      }
+
+      h2 {
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .cards {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 20px;
+        width: 300px;
+      }
+
+      .card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .card p {
+        font-size: 1rem;
+      }
+
+      .navbar-brand img {
+        height: 80px;
+        width: 80px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent px-4">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold fs-3 d-flex align-items-center" href="#">
+            <img src="assets/images/logo.png" alt="Logo" />
+            M v u s e l e l o
+          </a>
+          <ul class="navbar-nav ms-auto d-flex align-items-center">
+            <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="about.html">About Me</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="portfolio.html">Websites</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+          </ul>
+          <ul>
+            <li class="nav-item"><a class="nav-link text-white btn-developer" href="resume.html">Developer Portfolio</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero-banner position-relative">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/images/banner1.png" class="d-block w-100" alt="Banner 1" />
+            <div class="overlay-text text-white">
+              <h1 class="mb-2">Web Designer & Developer</h1>
+              <a href="portfolio.html" class="btn-primary">Explore My Work</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/banner2.png" class="d-block w-100" alt="Banner 2" />
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- WELCOME SECTION -->
+    <section class="section white">
+      <div class="container">
+        <h2>Elevating Brands Through Bespoke Web Solutions</h2>
+        <p class="lead">
+          I help brands and professionals establish high-impact digital identities through custom-built websites. Whether you're a business, creative, school, or startup — I transform your vision into an elegant, fast, and functional online experience.
+        </p>
+        <a href="contact.html" class="btn">Request a Website</a>
+      </div>
+    </section>
+
+    <!-- AUDIENCES -->
+    <section class="section blue">
+      <div class="container">
+        <h2>Designed for Visionaries & Innovators</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>For Clients</h3>
+            <p>Clean, professional websites tailored to your brand and mission.</p>
+            <a href="portfolio.html" class="btn-outline">View Past Projects</a>
+          </div>
+          <div class="card">
+            <h3>For Employers</h3>
+            <p>Explore my experience, GitHub, and what I bring to your team.</p>
+            <a href="resume.html" class="btn-developer">Developer Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer text-center py-4 bg-dark text-white">
+      <div class="container">
+        <p>Connect with me:</p>
+        <a href="https://www.linkedin.com/in/caleb-zondo-65480a229" target="_blank"><i class="fab fa-linkedin mx-2"></i></a>
+        <a href="https://github.com/ZondoJnr" target="_blank"><i class="fab fa-github mx-2"></i></a>
+        <a href="https://www.tiktok.com/@caleb_zondo?_t=ZM-8wpfi59YCMX&_r=1" target="_blank"><i class="fab fa-tiktok mx-2"></i></a>
+        <a href="https://www.facebook.com/share/19eyybCtSp/" target="_blank"><i class="fab fa-facebook mx-2"></i></a>
+        <a href="https://www.instagram.com/caleb_zondo" target="_blank"><i class="fab fa-instagram mx-2"></i></a>
+        <a href="https://youtube.com/@mvuselelo_zondo" target="_blank"><i class="fab fa-youtube mx-2"></i></a>
+        <p class="mt-3 mb-0">&copy; 2025 Caleb Zondo. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
