@@ -17,183 +17,175 @@
 
     <style>
       body {
-  background: linear-gradient(to bottom right, #1b1b3a, #ffffff);
-  color: #fff;
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-brand img {
-  height: 60px;
-  width: 60px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.navbar-nav .nav-link {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-}
-
-.hero-banner {
-  height: 60vh;
-  position: relative;
-}
-
-.hero-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.overlay-text {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  padding: 1rem;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 500px;
-  text-align: center;
-}
-
-.overlay-text h1 {
-  font-size: 1.5rem;
-  margin-bottom: 0.8rem;
-}
-
-.btn-primary,
-.btn-developer,
-.btn-outline,
-.btn {
-  width: 100%;
-  display: block;
-  margin-top: 1rem;
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.btn-primary {
-  background-color: #4a6fff;
-  color: white;
-  border: none;
-}
-
-.btn-developer {
-  background-color: #2033b3;
-  color: white;
-}
-
-.btn-outline {
-  border: 2px solid #4a6fff;
-  color: #4a6fff;
-  background: transparent;
-}
-
-.btn {
-  background-color: white;
-  color: #1b1b3a;
-}
-
-.section {
-  padding: 40px 20px;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  width: 100%;
-}
-
-.section.white {
-  background: linear-gradient(to bottom right, #1a1a4e, #2e1a47);
-}
-
-.cards {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-}
-
-.card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 20px;
-  width: 100%;
-  max-width: 350px;
-  text-align: center;
-}
-
-.card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.6rem;
-}
-
-.card p {
-  font-size: 1rem;
-}
-
-h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-footer a {
-  color: white;
-  font-size: 1.4rem;
-  padding: 0 5px;
-}
-
-.footer p {
-  font-size: 0.9rem;
-}
-
-@media (min-width: 768px) {
-  .cards {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .hero-banner {
-    height: 100vh;
-  }
-
-  .overlay-text h1 {
-    font-size: 2.2rem;
-  }
-
-  .btn-primary,
-  .btn-developer,
-  .btn-outline,
-  .btn {
-    width: auto;
-    display: inline-block;
-  }
-}
-
-
-      @media (max-width: 768px) {
-        .hero-banner {
-          height: 40vh;
-        }
-
-        .overlay-text {
-          
-          padding: 0.5rem;
-          font-size: 3.5vw;
-        }
-
-        .overlay-text h1 {
-          font-size: 1.1rem;
-        }
+        background: linear-gradient(to bottom right, #1b1b3a, #ffffff);
+        color: #fff;
+        text-align: center;
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 0;
       }
+
+      .hero-banner {
+        position: relative;
+        margin-bottom: 0;
+      }
+
+      .hero-banner img {
+        max-height: 600px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .overlay-text {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 1rem;
+        border-radius: 8px;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90vw;
+        max-width: 600px;
+        text-align: center;
+      }
+
+      .overlay-text h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .btn-primary {
+        background-color: #4a6fff;
+        border: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 6px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .btn-developer {
+        background-color: #2033b3;
+        color: white;
+        font-weight: 600;
+        border-radius: 6px;
+        padding: 10px 25px;
+        display: inline-block;
+        margin-top: 15px;
+        text-decoration: none;
+      }
+
+      .section {
+        padding: 60px 0;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        width: 90%;
+      }
+
+      .section.white {
+        background: linear-gradient(to bottom right, #1a1a4e, #2e1a47);
+      }
+
+      .btn-outline {
+        border: 2px solid #4a6fff;
+        color: #4a6fff;
+        padding: 8px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .btn {
+        background-color: white;
+        color: #1b1b3a;
+        padding: 10px 25px;
+        font-weight: 600;
+        border-radius: 6px;
+        text-decoration: none;
+        margin-top: 10px;
+      }
+
+      footer a {
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .footer p {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+      }
+
+      h2 {
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .cards {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 20px;
+        width: 300px;
+      }
+
+      .card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .card p {
+        font-size: 1rem;
+      }
+
+      .navbar-brand img {
+        height: 80px;
+        width: 80px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      /* Mobile Adjustments */
+      /* Mobile Adjustments */
+    @media (max-width: 768px) {
+      .hero-banner img {
+        max-height: 300px;
+      }
+
+      .overlay-text {
+        width: 90vw;
+        max-width: 600px;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 3vw;
+      }
+
+      .overlay-text h1 {
+        font-size: 1.2rem;
+      }
+
+      .cards {
+        justify-content: center;
+      }
+
+      .card {
+        width: 300px;
+      }
+
+      .section {
+        padding-top: 30px;
+        padding-bottom: 40px;
+      }
+    }
 
     </style>
   </head>
@@ -224,8 +216,8 @@ footer a {
     </header>
 
     <!-- HERO BANNER -->
-    <section class="hero-banner">
-      <div id="container mt 4 " class="carousel slide carousel-fade" data-bs-ride="false">
+    <section class="hero-banner position-relative">
+      <div id="container" class="carousel slide carousel-fade" data-bs-ride="false">
         <div class="container mt-4">
           <div class="container mt-4">
             <img src="assets/images/banner3.jpg" class="d-block w-100" alt="Banner 1" />
@@ -286,3 +278,5 @@ footer a {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+
+ 
