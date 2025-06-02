@@ -149,6 +149,12 @@
         border-radius: 50%;
         margin-right: 10px;
       }
+
+      @media (max-width: 768px) {
+        .hero-banner img {
+          max-height: 250px;
+        }
+      }  
     </style>
   </head>
 
@@ -180,7 +186,7 @@
     <!-- HERO BANNER -->
     <section class="hero-banner position-relative">
       <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner">
+        <div class="container mt-4">
           <div class="carousel-item active">
             <img src="assets/images/banner1.png" class="d-block w-100" alt="Banner 1" />
             <div class="overlay-text text-white">
@@ -188,13 +194,20 @@
               <a href="portfolio.html" class="btn-primary">Explore My Work</a>
             </div>
           </div>
-          <div class="carousel-item">
+          <div class="container mt-4">
             <img src="assets/images/banner2.png" class="d-block w-100" alt="Banner 2" />
           </div>
         </div>
 
         <!-- Controls -->
-        
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </section>
 
