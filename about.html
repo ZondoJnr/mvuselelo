@@ -19,16 +19,12 @@
       body {
         background: linear-gradient(to bottom right, #1b1b3a, #ffffff);
         color: #fff;
-        text-align: center;
         font-family: 'Segoe UI', sans-serif;
-      }
-
-      .hero-banner {
-        position: relative;
+        text-align: center;
       }
 
       .hero-banner img {
-        max-height: 1000vh;
+        max-height: 150vh;
         object-fit: cover;
       }
 
@@ -40,13 +36,11 @@
         bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
-        text-align: center;
         max-width: 90%;
-        width: fit-content;
       }
 
       .overlay-text h1 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         margin-bottom: 0.5rem;
       }
 
@@ -66,14 +60,12 @@
         font-weight: 600;
         border-radius: 6px;
         padding: 10px 25px;
-        display: inline-block;
-        margin-top: 15px;
         text-decoration: none;
+        white-space: nowrap;
       }
 
       .section {
         padding: 60px 0;
-        border: 1px solid rgba(255, 255, 255, 0.2);
         margin: 20px auto;
         background-color: rgba(255, 255, 255, 0.05);
         border-radius: 16px;
@@ -82,15 +74,6 @@
 
       .section.white {
         background: linear-gradient(to bottom right, #1a1a4e, #2e1a47);
-      }
-
-      .btn-outline {
-        border: 2px solid #4a6fff;
-        color: #4a6fff;
-        padding: 8px 20px;
-        border-radius: 6px;
-        text-decoration: none;
-        font-weight: 600;
       }
 
       .btn {
@@ -103,18 +86,17 @@
         margin-top: 10px;
       }
 
-      footer a {
-        color: white;
-        font-size: 1.2rem;
-      }
-
-      .footer p {
-        margin-top: 1rem;
-        font-size: 0.9rem;
+      .btn-outline {
+        border: 2px solid #4a6fff;
+        color: #4a6fff;
+        padding: 8px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
       }
 
       h2 {
-        font-size: 2.4rem;
+        font-size: 2rem;
         font-weight: bold;
         margin-bottom: 20px;
       }
@@ -125,11 +107,21 @@
       }
 
       .navbar-brand img {
-        height: 80px;
-        width: 80px;
+        height: 60px;
+        width: 60px;
         object-fit: cover;
         border-radius: 50%;
         margin-right: 10px;
+      }
+
+      footer a {
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .footer p {
+        margin-top: 1rem;
+        font-size: 0.9rem;
       }
     </style>
   </head>
@@ -143,47 +135,57 @@
             <img src="assets/images/logo.png" alt="Logo" />
             M v u s e l e l o
           </a>
-          <ul class="navbar-nav ms-auto d-flex align-items-center">
-            <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="about.html">About Me</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="portfolio.html">Websites</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-          </ul>
-          <ul>
-            <li class="nav-item"><a class="nav-link text-white btn-developer" href="resume.html">Developer Portfolio</a></li>
-          </ul>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-center">
+              <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="about.html">About Me</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="portfolio.html">Websites</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+              <li class="nav-item">
+                <a class="nav-link text-white btn-developer ms-lg-3 mt-2 mt-lg-0" href="resume.html">Developer Portfolio</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
 
-    <!-- HERO BANNER - ONLY BANNER1 -->
+    <!-- HERO BANNER -->
     <section class="hero-banner position-relative">
-      <img src="assets/images/banner1.png" class="d-block w-100" alt="Banner 1" />
+      <img src="assets/images/banner1.png" class="img-fluid w-100" alt="Banner 1" />
       <div class="overlay-text text-white">
         <h1 class="mb-2">About My Web Design & Development Services</h1>
       </div>
     </section>
 
     <!-- ABOUT SECTION -->
-    <section class="section white">
+    <section class="section white text-center">
       <div class="container">
         <h2>Professional Web Solutions for Modern Brands</h2>
-        <p class="lead">
-          As a dedicated web designer and developer, I specialize in building sleek, high-performing websites tailored to the unique needs of each client.
-          Whether you're a business owner, independent professional, creative, or educational institution, I offer digital solutions that combine elegant design
-          with technical excellence.
-        </p>
-        <p class="lead">
-          My services are ideal for those seeking a strong online presence that not only looks great but functions flawlessly. Every website I craft is responsive,
-          user-friendly, and optimized for performance, ensuring your visitors enjoy a seamless experience across all devices.
-        </p>
-        <p class="lead">
-          For entrepreneurs and companies, a well-designed website serves as a 24/7 ambassador of your brand. It builds trust, increases visibility, and drives growth.
-          My approach is always client-focused — I take the time to understand your goals, audience, and brand identity to deliver a final product that exceeds expectations.
-        </p>
-        <p class="lead">
-          If you're curious or ready to elevate your digital presence, I invite you to <a href="contact.html" class="btn">get in touch</a>. Let's turn your vision into a powerful, modern website.
-        </p>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <p class="lead">
+              As a dedicated web designer and developer, I specialize in building sleek, high-performing websites tailored to the unique needs of each client.
+              Whether you're a business owner, independent professional, creative, or educational institution, I offer digital solutions that combine elegant design
+              with technical excellence.
+            </p>
+            <p class="lead">
+              My services are ideal for those seeking a strong online presence that not only looks great but functions flawlessly. Every website I craft is responsive,
+              user-friendly, and optimized for performance, ensuring your visitors enjoy a seamless experience across all devices.
+            </p>
+            <p class="lead">
+              For entrepreneurs and companies, a well-designed website serves as a 24/7 ambassador of your brand. It builds trust, increases visibility, and drives growth.
+              My approach is always client-focused — I take the time to understand your goals, audience, and brand identity to deliver a final product that exceeds expectations.
+            </p>
+            <p class="lead">
+              If you're curious or ready to elevate your digital presence, I invite you to <a href="contact.html" class="btn">get in touch</a>.
+              Let's turn your vision into a powerful, modern website.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -191,12 +193,14 @@
     <footer class="footer text-center py-4 bg-dark text-white">
       <div class="container">
         <p>Connect with me:</p>
-        <a href="https://www.linkedin.com/in/caleb-zondo-65480a229" target="_blank"><i class="fab fa-linkedin mx-2"></i></a>
-        <a href="https://github.com/ZondoJnr" target="_blank"><i class="fab fa-github mx-2"></i></a>
-        <a href="https://www.tiktok.com/@caleb_zondo?_t=ZM-8wpfi59YCMX&_r=1" target="_blank"><i class="fab fa-tiktok mx-2"></i></a>
-        <a href="https://www.facebook.com/share/19eyybCtSp/" target="_blank"><i class="fab fa-facebook mx-2"></i></a>
-        <a href="https://www.instagram.com/caleb_zondo" target="_blank"><i class="fab fa-instagram mx-2"></i></a>
-        <a href="https://youtube.com/@mvuselelo_zondo" target="_blank"><i class="fab fa-youtube mx-2"></i></a>
+        <div class="d-flex justify-content-center mb-2 flex-wrap">
+          <a href="https://www.linkedin.com/in/caleb-zondo-65480a229" target="_blank"><i class="fab fa-linkedin mx-2"></i></a>
+          <a href="https://github.com/ZondoJnr" target="_blank"><i class="fab fa-github mx-2"></i></a>
+          <a href="https://www.tiktok.com/@caleb_zondo?_t=ZM-8wpfi59YCMX&_r=1" target="_blank"><i class="fab fa-tiktok mx-2"></i></a>
+          <a href="https://www.facebook.com/share/19eyybCtSp/" target="_blank"><i class="fab fa-facebook mx-2"></i></a>
+          <a href="https://www.instagram.com/caleb_zondo" target="_blank"><i class="fab fa-instagram mx-2"></i></a>
+          <a href="https://youtube.com/@mvuselelo_zondo" target="_blank"><i class="fab fa-youtube mx-2"></i></a>
+        </div>
         <p class="mt-3 mb-0">&copy; 2025 Caleb Zondo. All rights reserved.</p>
       </div>
     </footer>

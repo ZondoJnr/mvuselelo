@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,22 +19,24 @@
       body {
         background: linear-gradient(to bottom right, #1b1b3a, #ffffff);
         color: #fff;
-        text-align: center;
         font-family: 'Segoe UI', sans-serif;
       }
 
       .hero-banner {
         position: relative;
+        height: 150vh;
+        overflow: hidden;
       }
 
       .hero-banner img {
-        max-height: 1000vh;
+        width: 100%;
+        
         object-fit: cover;
       }
 
       .overlay-text {
         background: rgba(0, 0, 0, 0.6);
-        padding: 0.75rem 1.5rem;
+        padding: 1rem 2rem;
         border-radius: 8px;
         position: absolute;
         bottom: 20px;
@@ -42,12 +44,10 @@
         transform: translateX(-50%);
         text-align: center;
         max-width: 90%;
-        width: fit-content;
       }
 
       .overlay-text h1 {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
+        font-size: 2rem;
       }
 
       .btn-developer {
@@ -55,22 +55,21 @@
         color: white;
         font-weight: 600;
         border-radius: 6px;
-        padding: 10px 25px;
-        display: inline-block;
-        margin-top: 15px;
+        padding: 10px 20px;
+        margin-left: 1rem;
         text-decoration: none;
       }
 
       .navbar-brand img {
-        height: 80px;
-        width: 80px;
+        height: 60px;
+        width: 60px;
         object-fit: cover;
         border-radius: 50%;
         margin-right: 10px;
       }
 
       .contact-section {
-        padding: 60px 0;
+        padding: 60px 20px;
       }
 
       .form-control {
@@ -87,6 +86,15 @@
         border-radius: 6px;
       }
 
+      .footer a {
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .footer a:hover {
+        color: #aaa;
+      }
+
       .footer p {
         margin-top: 1rem;
         font-size: 0.9rem;
@@ -97,52 +105,54 @@
   <body>
     <!-- NAVBAR -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent px-4">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent px-3">
         <div class="container-fluid">
-          <a class="navbar-brand fw-bold fs-3 d-flex align-items-center" href="#">
+          <a class="navbar-brand fw-bold fs-4 d-flex align-items-center" href="#">
             <img src="assets/images/logo.png" alt="Logo" />
             M v u s e l e l o
           </a>
-          <ul class="navbar-nav ms-auto d-flex align-items-center">
-            <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="about.html">About Me</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="portfolio.html">Websites</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-          </ul>
-          <ul>
-            <li class="nav-item"><a class="nav-link text-white btn-developer" href="resume.html">Developer Portfolio</a></li>
-          </ul>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="about.html">About Me</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="portfolio.html">Websites</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+            </ul>
+            <a class="btn-developer nav-link text-white" href="resume.html">Developer Portfolio</a>
+          </div>
         </div>
       </nav>
     </header>
 
     <!-- HERO BANNER -->
-    <section class="hero-banner position-relative">
-      <img src="assets/images/banner1.png" class="d-block w-100" alt="Banner 1" />
+    <section class="hero-banner">
+      <img src="assets/images/banner1.png" alt="Banner" />
       <div class="overlay-text text-white">
-        <h1 class="mb-2">Let’s Connect</h1>
+        <h1 class="mb-0">Let’s Connect</h1>
       </div>
     </section>
 
     <!-- CONTACT SECTION -->
-    <section class="contact-section">
+    <section class="contact-section text-center">
       <div class="container">
         <h2 class="mb-4">Get in Touch</h2>
-        <p class="lead mb-5">
-          Interested in working together or have questions about my services? I’d love to hear from you.<br />
-          Fill out the form below or email me directly and I’ll respond as soon as possible.<br />
-           <em>PS: Project pricing ranges between R3 500 - R15 000($200-800), depending on the scope and complexity.</em>
+        <p class="lead mb-5 px-md-5">
+          Interested in working together or have questions about my services?<br />
+          Fill out the form or email me and I’ll respond as soon as possible.<br />
+          <em>Project pricing: R3 500 - R15 000 ($200–800)</em>
         </p>
         <div class="row justify-content-center">
-          <div class="col-md-8">
+          <div class="col-12 col-md-10 col-lg-8">
             <form id="contactForm" onsubmit="return false;">
               <input type="text" id="name" class="form-control" placeholder="Your Name" required />
               <input type="email" id="email" class="form-control" placeholder="Your Email" required />
               <textarea id="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
-
-              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-3">
-                <button class="btn btn-success" onclick="submitWhatsApp()">Submit via WhatsApp</button>
-                <button class="btn btn-primary" onclick="submitEmail()">Submit via Email</button>
+              <div class="d-grid gap-3 d-sm-flex justify-content-sm-center mt-3">
+                <button class="btn btn-success" onclick="submitWhatsApp()">Send via WhatsApp</button>
+                <button class="btn btn-primary" onclick="submitEmail()"> Send via Email</button>
               </div>
             </form>
           </div>
@@ -153,41 +163,37 @@
     <!-- FOOTER -->
     <footer class="footer text-center py-4 bg-dark text-white">
       <div class="container">
-        <p>Connect with me:</p>
-        <a href="https://www.linkedin.com/in/caleb-zondo-65480a229" target="_blank"><i class="fab fa-linkedin mx-2"></i></a>
-        <a href="https://github.com/ZondoJnr" target="_blank"><i class="fab fa-github mx-2"></i></a>
-        <a href="https://www.tiktok.com/@caleb_zondo?_t=ZM-8wpfi59YCMX&_r=1" target="_blank"><i class="fab fa-tiktok mx-2"></i></a>
-        <a href="https://www.facebook.com/share/19eyybCtSp/" target="_blank"><i class="fab fa-facebook mx-2"></i></a>
-        <a href="https://www.instagram.com/caleb_zondo" target="_blank"><i class="fab fa-instagram mx-2"></i></a>
-        <a href="https://youtube.com/@mvuselelo_zondo" target="_blank"><i class="fab fa-youtube mx-2"></i></a>
-        <p class="mt-3 mb-0">&copy; 2025 Caleb Zondo. All rights reserved.</p>
+        <p class="mb-2">Connect with me:</p>
+        <div class="d-flex justify-content-center flex-wrap gap-3 mb-3">
+          <a href="https://www.linkedin.com/in/caleb-zondo-65480a229" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/ZondoJnr" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.tiktok.com/@caleb_zondo?_t=ZM-8wpfi59YCMX&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.facebook.com/share/19eyybCtSp/" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/caleb_zondo" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@mvuselelo_zondo" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="mb-0">&copy; 2025 Caleb Zondo. All rights reserved.</p>
       </div>
     </footer>
 
-    <!-- WhatsApp/Email Scripts -->
+    <!-- Contact Submission Scripts -->
     <script>
       function submitWhatsApp() {
         const name = encodeURIComponent(document.getElementById("name").value);
         const email = encodeURIComponent(document.getElementById("email").value);
         const message = encodeURIComponent(document.getElementById("message").value);
-        const phoneNumber = "27799138027"; // Replace with your WhatsApp number
-
+        const phoneNumber = "27799138027";
         const text = `Hello, my name is ${name}. My email is ${email}. Message: ${message}`;
-        const url = `https://wa.me/${phoneNumber}?text=${text}`;
-
-        window.open(url, "_blank");
+        window.open(`https://wa.me/${phoneNumber}?text=${text}`, "_blank");
       }
 
       function submitEmail() {
         const name = encodeURIComponent(document.getElementById("name").value);
         const email = encodeURIComponent(document.getElementById("email").value);
         const message = encodeURIComponent(document.getElementById("message").value);
-
         const subject = `Inquiry from ${name}`;
         const body = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
-        const mailtoLink = `mailto:calebzondo8.@gmail.com?subject=${subject}&body=${body}`;
-
-        window.location.href = mailtoLink;
+        window.location.href = `mailto:calebzondo8.@gmail.com?subject=${subject}&body=${body}`;
       }
     </script>
 
