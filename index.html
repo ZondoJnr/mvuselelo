@@ -21,32 +21,44 @@
         color: #fff;
         text-align: center;
         font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 0;
       }
 
       .hero-banner {
-        position: relative;
+        position: static;
+        height: 150vh;
+        margin-bottom: 0;
+        overflow: hidden;
       }
 
       .hero-banner img {
-        max-height: 1000vh;
+        max-height: 1000px;
+        object-fit: cover;
+        width: 100%;
+        position: static;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
       }
 
       .overlay-text {
-        background: rgba(0, 0, 0, 0.6);
-        padding: 0.75rem 1.5rem;
-        border-radius: 8px;
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        max-width: 90%;
-        width: fit-content;
+     
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      width: 90vw;
+      max-width: 600px;
       }
 
       .overlay-text h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-bottom: 0.5rem;
       }
 
@@ -73,8 +85,7 @@
 
       .section {
         padding: 60px 0;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        margin: 20px auto;
+        margin: 0 auto;
         background-color: rgba(255, 255, 255, 0.05);
         border-radius: 16px;
         width: 90%;
@@ -150,11 +161,8 @@
         margin-right: 10px;
       }
 
-      @media (max-width: 768px) {
-        .hero-banner img {
-          max-height: 250px;
-        }
-      }  
+      
+
     </style>
   </head>
 
@@ -184,30 +192,17 @@
     </header>
 
     <!-- HERO BANNER -->
-    <section class="hero-banner position-relative">
-      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <section class="hero-banner">
+      <div id="container mt 4 " class="carousel slide carousel-fade" data-bs-ride="false">
         <div class="container mt-4">
-          <div class="carousel-item active">
-            <img src="assets/images/banner1.png" class="d-block w-100" alt="Banner 1" />
+          <div class="container mt-4">
+            <img src="assets/images/banner3.jpg" class="d-block w-100" alt="Banner 1" />
             <div class="overlay-text text-white">
               <h1 class="mb-2">Web Designer & Developer</h1>
               <a href="portfolio.html" class="btn-primary">Explore My Work</a>
             </div>
           </div>
-          <div class="container mt-4">
-            <img src="assets/images/banner2.png" class="d-block w-100" alt="Banner 2" />
-          </div>
         </div>
-
-        <!-- Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
     </section>
 
