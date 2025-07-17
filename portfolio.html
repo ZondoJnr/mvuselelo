@@ -1,305 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio | Caleb Zondo - Web Designer & Developer</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio | Ruach Digital</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
 
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #111;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .navbar-brand img {
+      height: 60px; width: 60px; object-fit: cover;
+      border-radius: 50%; margin-right: 10px;
+    }
+    .section {
+      padding: 60px 20px;
+    }
+    .project-card {
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .project-card video {
+      width: 100%;
+      border-radius: 8px;
+      background: #000;
+    }
+    .btn-primary {
+      background-color: #d4af37;
+      color: black;
+      font-weight: bold;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .btn-primary:hover {
+      background-color: #c49c2d;
+    }
+    footer.footer {
+      background: #111;
+      color: white;
+      padding: 2rem 0;
+    }
+    .social-icons a {
+      color: #111;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: transform 0.3s;
+    }
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/script.js" defer></script>
-
-    <style>
-      body {
-        background: linear-gradient(to bottom right, #1b1b3a, #2c2c54);
-        color: #fff;
-        font-family: 'Segoe UI', sans-serif;
-      }
-
-      .hero-banner {
-        position: relative;
-      }
-
-      .hero-banner img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-      }
-
-      .overlay-text {
-        background: rgba(0, 0, 0, 0.6);
-        padding: 0.75rem 1.5rem;
-        border-radius: 8px;
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        max-width: 90%;
-        width: fit-content;
-      }
-
-      .navbar-brand img {
-        height: 60px;
-        width: 60px;
-        object-fit: cover;
-        border-radius: 50%;
-        margin-right: 10px;
-      }
-
-      .btn-developer {
-        background-color: #2033b3;
-        color: white;
-        font-weight: 600;
-        border-radius: 6px;
-        padding: 10px 20px;
-        text-decoration: none;
-        margin-left: 1rem;
-      }
-
-      .portfolio-section {
-        padding: 60px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .portfolio-section video {
-        width: 100%;
-        height: auto;
-        border-radius: 12px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-        background: #000;
-      }
-
-      .portfolio-section h2 {
-        margin-bottom: 20px;
-        color: #ffffff;
-      }
-
-      .portfolio-section p {
-        font-size: 1.1rem;
-        color: #e0e0e0;
-      }
-
-      .more-coming {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 30px;
-        border-radius: 10px;
-        text-align: center;
-        margin: 40px auto;
-        max-width: 800px;
-      }
-
-      .testimonial-card {
-        background: rgba(255, 255, 255, 0.07);
-        padding: 20px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        color: #ffffff;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      }
-
-      .testimonial-card p {
-        font-style: italic;
-        margin-bottom: 10px;
-      }
-
-      .testimonial-card .client {
-        font-weight: bold;
-        font-size: 1rem;
-        color: #a8d1ff;
-      }
-
-      @media (max-width: 768px) {
-        .overlay-text {
-          font-size: 1rem;
-          padding: 0.5rem 1rem;
-        }
-
-        .navbar-brand img {
-          height: 50px;
-          width: 50px;
-        }
-
-        .btn-developer {
-          padding: 8px 16px;
-          font-size: 0.9rem;
-        }
-
-        .portfolio-section p {
-          font-size: 1rem;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- NAVBAR -->
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent px-4">
-        <div class="container-fluid">
-          <a class="navbar-brand fw-bold fs-4 d-flex align-items-center" href="#">
-            <img src="assets/images/logo.jpg" alt="Logo" />
-            Digital Forge
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="about.html">About Me</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="portfolio.html">Websites</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-            </ul>
-            <a class="nav-link text-white btn-developer" href="resume.html">Developer Portfolio</a>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <!-- HERO BANNER -->
-    <section class="hero-banner position-relative">
-      <img src="assets/images/banner1.png" class="img-fluid" alt="Banner 1" />
-      <div class="overlay-text text-white">
-        <h1 class="mb-2">Websites I’ve Built</h1>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/logo.jpg" alt="Ruach Logo" />
+        Ruach Digital
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item">
+            <a class="nav-link btn-primary ms-lg-3" href="contact.html">Get in Touch</a>
+          </li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </nav>
 
-    <!-- PORTFOLIO SECTION: Royal Roastery -->
-    <section class="portfolio-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <h2 class="text-center">Royal Roastery Coffee Shop Website</h2>
-            <video controls muted playsinline preload="metadata" oncontextmenu="return false;">
-              <source src="assets/videos/royal.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <p class="mt-4">
-              This is one of my favorite and most complete projects a modern, elegant, and fully responsive website created for Royal Roastery, a coffee shop based in Bloemfontein.
-              <br /><br />
-              The website reflects the brand’s warmth and quality, showcasing their menu, location, and the story behind their premium coffee. From visuals to layout, this site demonstrates the kind of digital presence I aim to build for every client.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- PORTFOLIO SECTION 1 -->
-    <section class="portfolio-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <h2 class="text-center">Christ Tabernacle Website</h2>
-            <video controls muted playsinline preload="metadata" oncontextmenu="return false;">
-              <source src="assets/videos/video1.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <p class="mt-4">
-              This project showcases a website I developed for Christ Tabernacle. The site allows visitors to learn more about the church, view upcoming events, access resources, and connect with the ministry. It includes a structured layout for sermons, leadership profiles, and future integration of livestream services.
-              <br /><br />
-              The website is currently under construction — many more features like event registration, giving portal, and content uploads will be added. It is not live yet, but serves as a solid foundation for a professional church website.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO SECTION 2 -->
-    <section class="portfolio-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <h2 class="text-center">Thabiso Mdlalose Website</h2>
-            <video controls muted playsinline preload="metadata" oncontextmenu="return false;">
-              <source src="assets/videos/video2.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <p class="mt-4">
-              This is a personal website built for Thabiso Mdlalose — a vibrant MC, entrepreneur, and artist. The website will be used to showcase his services, gallery, biography, and booking information.
-              <br /><br />
-              Just like the previous project, this site is also under construction. Additional features such as social proof, client testimonials, booking calendar, and downloadable media kits are still being developed.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO SECTION 3 -->
-    <section class="portfolio-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <h2 class="text-center">Gladness House of God Ministries Website</h2>
-            <video controls muted playsinline preload="metadata" oncontextmenu="return false;">
-              <source src="assets/videos/gladness.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <p class="mt-4">
-              This project was created for Gladness House of God Ministries — a dynamic and growing church committed to spreading the Word of God and serving the community. The website includes key information about the church, upcoming events, and ways to connect with the ministry. It's mobile-responsive, fast-loading, and aligned with the church's black-and-white theme.
-              <br /><br />
-              Whether you're a church, ministry, or faith-based organization, a professionally designed website is essential in today's digital age. This site serves as a great example of how your message can reach further with the right design and structure.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MORE WEBSITES COMING SOON -->
-    <section class="portfolio-section more-coming">
-      <p>
-        More websites for law firms, artists, entrepreneurs, and churches are currently in development.<br />
-        Feel free to return soon for more inspiration and ideas — new projects will be posted as they go live.<br />
-        <strong>Don’t miss your chance to establish your presence online — <a href="contact.html" class="text-info text-decoration-underline">reach out via the Contact page</a>.</strong>
+  <!-- INTRO -->
+  <section class="section text-center">
+    <div class="container">
+      <h2 class="mb-3">Featured Work</h2>
+      <p class="lead">
+        A glimpse into the websites we’ve crafted — tailored for businesses, churches, creatives, and entrepreneurs.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <!-- CLIENT TESTIMONIALS SECTION -->
-    <section class="portfolio-section">
-      <div class="container">
-        <h2 class="text-center mb-5">What My Clients Say</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="testimonial-card">
-              <p> “Working with Caleb was an absolute game-changer for our brand. His creativity, attention to detail, 
-                and professionalism made the process seamless.
-                The website he built for Thabiso Clothing truly reflects the energy and quality of our brand — 
-                we’ve seen a huge spike in online engagement since launch.”</p>
-              <div class="client">— Thabiso Mdlalose, MC & Entrepreneur</div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="testimonial-card">
-              <p>“Mvuselelo’s work is exceptional. He handled our website with excellence, clarity, and patience. The result was beyond our expectations — our online presence now reflects the spirit of our ministry beautifully.”</p>
-              <div class="client">— Pastor LJ Dlamini, Gladness House of God Ministries</div>
-            </div>
-          </div>
+  <!-- PROJECTS -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <h4>Royal Roastery — Coffee Shop Website</h4>
+        <video controls muted preload="metadata">
+          <source src="assets/videos/royal.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <p class="mt-3">
+          A warm, modern site for Royal Roastery in Bloemfontein. Fully responsive and designed to capture the essence of their premium brand — from their story to their menu.
+        </p>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <h4>Christ Tabernacle — Church Website</h4>
+        <video controls muted preload="metadata">
+          <source src="assets/videos/video1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <p class="mt-3">
+          A complete digital home for a growing ministry: service details, events, sermon layouts, and a foundation for livestreams. Clean, mobile-friendly, and scalable.
+        </p>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <h4>Thabiso Mdlalose — Personal Brand Site</h4>
+        <video controls muted preload="metadata">
+          <source src="assets/videos/video2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <p class="mt-3">
+          Built for a multi-talented MC and entrepreneur. This sleek platform highlights his biography, booking info, gallery, and future client reviews.
+        </p>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <h4>Gladness House of God Ministries</h4>
+        <video controls muted preload="metadata">
+          <source src="assets/videos/gladness.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <p class="mt-3">
+          A minimal, impactful church site matching their black-and-white theme. Built for connection, clarity, and quick access to ministry events and contact.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-light text-center">
+    <div class="container">
+      <h4>More Coming Soon</h4>
+      <p>
+        New websites for brands, churches, and creators are on the way.
+        Don’t wait to start yours — <a href="contact.html" class="text-decoration-underline">contact us today</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+<section class="section bg-light">
+  <div class="container">
+    <h3 class="text-center mb-5">What Our Clients Say</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="testimonial">
+          <p>"Working with Ruach Digital was seamless. They delivered a clean, modern website that performs beautifully."</p>
+          <h5>- LJ Dlamini</h5>
         </div>
       </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer text-center py-4 bg-dark text-white">
-      <div class="container">
-        <p>Connect with me:</p>
-        <a href="https://www.linkedin.com/in/caleb-zondo-65480a229" target="_blank"><i class="fab fa-linkedin mx-2"></i></a>
-        <a href="https://github.com/ZondoJnr" target="_blank"><i class="fab fa-github mx-2"></i></a>
-        <a href="https://www.tiktok.com/@caleb_zondo?_t=ZM-8wpfi59YCMX&_r=1" target="_blank"><i class="fab fa-tiktok mx-2"></i></a>
-        <a href="https://www.facebook.com/share/19eyybCtSp/" target="_blank"><i class="fab fa-facebook mx-2"></i></a>
-        <a href="https://www.instagram.com/caleb_zondo" target="_blank"><i class="fab fa-instagram mx-2"></i></a>
-        <a href="https://youtube.com/@mvuselelo_zondo" target="_blank"><i class="fab fa-youtube mx-2"></i></a>
-        <p class="mt-3 mb-0">&copy; 2025 Caleb Zondo. All rights reserved.</p>
+      <div class="col-md-4">
+        <div class="testimonial">
+          <p>"Professional and on time. Our business is attracting an audience online, thanks to the stunning online presence they created."</p>
+          <h5>- Lisa Moremi</h5>
+        </div>
       </div>
-    </footer>
+      <div class="col-md-4">
+        <div class="testimonial">
+          <p>"Excellent service! They went above and beyond to ensure our brand stood out online."</p>
+          <h5>- Henno Steyn.</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+
+  <!-- FOOTER -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p class="mb-2">Follow us online</p>
+      <div class="social-icons mb-3">
+        <a href="https://www.linkedin.com/in/caleb-zondo-65480a229" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/ZondoJnr" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.tiktok.com/@caleb_zondo" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/share/19eyybCtSp/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/caleb_zondo" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@mvuselelo_zondo" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p class="mb-0">&copy; 2025 Ruach Digital. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
