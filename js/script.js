@@ -18,5 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Change slide every 5 seconds
   setInterval(nextSlide, 5000);
-});
+})
+
+  document.getElementById('whatsappBtn').addEventListener('click', function () {
+    const form = document.getElementById('quoteForm');
+    const name = form.name.value;
+    const email = form.email.value;
+    const service = form.service.value;
+    const message = form.message.value;
+
+    const text = encodeURIComponent(
+      `*New Quote Request*\nName: ${name}\nEmail: ${email}\nService: ${service}\nMessage: ${message}`
+    );
+    const whatsappURL = `https://wa.me/27799138027?text=${text}`;
+    window.open(whatsappURL, '_blank');
+  });
 
